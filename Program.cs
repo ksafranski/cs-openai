@@ -29,8 +29,8 @@ namespace TestOpenAIReq
           // Make a POST request to the OpenAI API
           var response = client.PostAsJsonAsync(client.BaseAddress.ToString(), new { 
             messages = new List<PromptMessage> {
-              new PromptMessage { Role = "system", Content = "You are a helpful assistant."},
-              new PromptMessage { Role = "user", Content = prompt }
+              new() { Role = "system", Content = "You are a helpful assistant."},
+              new() { Role = "user", Content = prompt }
             },
             model = "gpt-3.5-turbo",
             max_tokens = 500,

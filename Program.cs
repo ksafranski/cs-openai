@@ -1,12 +1,7 @@
 ﻿using System.Net.Http.Headers;
 using System.Net.Http.Json;
 using System.Text.Json.Nodes;
-
-// Constructs prompt messages
-class PromptMessage {
-  public string Role { get; set; } = "user";
-  public string Content { get; set; } = "";
-}
+using PromptMessages;
 
 namespace TestOpenAIReq
 {
